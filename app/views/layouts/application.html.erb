@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OurBlog</title>
+    <title>My_Blog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <header class="header">
     <div class="header__title">
-      <%= link_to "Our Blog", root_path, class: "header__title--text" %>
+      <%= link_to "My_Blog", root_path, class: "header__title--text" %>
     </div>
     <div class="header__right">
     <% if user_signed_in? %>

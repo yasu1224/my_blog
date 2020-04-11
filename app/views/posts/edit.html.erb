@@ -3,6 +3,10 @@
 </div>
 <%= form_with model: @post, class: :form, local: true do |form| %>
   <%= form.text_field :title, placeholder: :タイトル, class: :form__title %>
+  <%= form.label :img %>
+  <%= form.file_field :img, class: :form__image %>
+  <%= image_tag @post.img.url, id: :img_prev if @post.img? %>
+  <p><%= form.check_box :remove_img %>画像を削除する</p>
   <%= form.text_area :content, placeholder: :ブログ本文, class: :form__text %>
   <%= form.submit '投稿する', class: :form__btn %>
 <% end %>
