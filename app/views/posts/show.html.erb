@@ -13,5 +13,6 @@
   </div>
 <% end %>
 <div class="postText">
+  <%= image_tag @post.img.url if @post.img?%>
   <%= simple_format @post.content %>
 </div>
