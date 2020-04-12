@@ -6,6 +6,7 @@
   <%= form.text_field :title, placeholder: :タイトル, class: :form__title %>
   <%= form.label :img %>
   <%= form.file_field :img, class: :form__image %>
-  <%= form.text_area :content, placeholder: :ブログ本文, class: :form__text, id: :form__text__content %>
+  <%= form.hidden_field :content, placeholder: :ブログ本文, id: :form__text %>
+  <trix-editor input = "form__text" ></trix-editor>
   <%= form.submit '投稿する', class: :form__btn %>
 <% end %>
