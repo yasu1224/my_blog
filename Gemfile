@@ -68,3 +68,9 @@ gem 'jquery-rails'
 gem 'wysiwyg-rails'
 gem 'font-awesome-sass'
 gem 'trix'
+
+
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
